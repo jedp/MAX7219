@@ -37,3 +37,18 @@ because the MAX7219 will power up into a test mode with all LEDs blazing
 *before* your configurations takes effect. You could probably burn out your
 nice display by accident this way.
 
+#### Notes on pinout
+
+For just one IC; not daisy-chaining them.
+
+Pin 1 DATA: Data loaded on CLK's rising edge.
+
+Pin 12 NCS: Data is loaded into the shift register when this is low.
+
+Pin 13 CLK.
+
+Pins 2, 3, 5, 6, 7, 8, 10, and 11 (the DIG pins) are pulled high when
+switched off.
+
+Pins 14, 15, 16, 17, 20, 21, 22, and 22 (the SEG and DP pins) are pulled low when
+switched off.
